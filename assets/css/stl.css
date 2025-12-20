@@ -1,0 +1,1104 @@
+/* General Reset */
+:root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --accent-color: #007bff; /* Optional accent blue */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+     font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.115);
+    padding: 1.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    color: var(--text-color);
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.navbar-brand span {
+    color: var(--accent-color);
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    margin-left: 20px;
+    font-weight: 500;
+    /* text-transform: uppercase; */
+    font-size: 0.9rem;
+}
+
+.navbar-toggler {
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+}
+
+/* Animation Classes */
+.animate-load {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.6s ease-out;
+}
+
+.animate-load.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   MOBILE MENU & TOGGLE
+   ========================================= */
+
+/* Hamburger Toggle */
+.navbar-mobile-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+/* Update your existing toggle CSS with these two lines */
+.navbar-mobile-toggle {
+    z-index: 2000; /* Higher than the overlay */
+    position: relative; 
+}
+
+/* Ensure the overlay is a flex container so clicking the empty space works */
+.navbar-mobile-overlay {
+    cursor: pointer; /* Shows user they can click to close */
+}
+
+.navbar-mobile-links, .navbar-mobile-socials {
+    cursor: default; /* Keeps links feeling like links */
+}
+
+.navbar-mobile-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Toggle Animation to "X" */
+.navbar-mobile-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    background-color: #007bff;
+}
+.navbar-mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.navbar-mobile-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    background-color: #007bff;
+}
+
+/* Full-Screen Overlay */
+.navbar-mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0; /* Hidden by default */
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 1500;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.navbar-mobile-overlay.open {
+    height: 100vh;
+}
+
+.navbar-mobile-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar-mobile-links li {
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s;
+}
+
+.navbar-mobile-overlay.open .navbar-mobile-links li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navbar-mobile-links a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+}
+
+.navbar-mobile-links a:hover {
+    color: #007bff;
+}
+
+.navbar-mobile-socials {
+    margin-top: 40px;
+}
+
+.navbar-mobile-socials a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 15px;
+}
+
+/* Show toggle on mobile devices */
+@media (max-width: 991px) {
+    .navbar-mobile-toggle {
+        display: flex;
+    }
+}
+
+
+
+/* hero */
+/* Update Font Family */
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    height: 85vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
+
+.hero-overlay {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 100%;
+    height: 95vh; /* Per your request */
+    opacity: 0.8;
+}
+
+.carousel-caption-left {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+    bottom: auto; /* Overriding Bootstrap default */
+    width: 40%;
+}
+
+.carousel-caption h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.carousel-caption p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.8rem;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* On-load Animation States */
+.animate-hero {
+    opacity: 0;
+    transform: translateX(-30px); /* Slide in from left */
+    transition: all 0.8s ease-out;
+}
+
+.carousel-item.active .animate-hero {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.carousel-item.active .animate-hero:nth-child(1) { transition-delay: 0.3s; }
+.carousel-item.active .animate-hero:nth-child(2) { transition-delay: 0.5s; }
+.carousel-item.active .animate-hero:nth-child(3) { transition-delay: 0.7s; }
+
+/* about */
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
+.about-section {
+    background-color: #000000;
+    color: #ffffff;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.about-img-wrapper {
+    position: relative;
+    padding: 20px;
+}
+
+.about-img {
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.about-img:hover {
+    filter: grayscale(0%);
+}
+
+.about-img-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    border: 5px solid #007bff;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.about-title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.about-title span {
+    color: #007bff;
+}
+
+.about-subtitle {
+    font-weight: 500;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    line-height: 1.8;
+    color: #bbbbbb;
+    margin-bottom: 30px;
+}
+
+.about-details li {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.about-details i {
+    color: #007bff;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 1px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Animation Hidden States */
+.about-animate-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1s ease;
+}
+
+.about-animate-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s ease;
+}
+
+.about-visible {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+/* skills */
+/* =========================================
+   SKILLS SECTION
+   ========================================= */
+.skills-section {
+    background-color: #000000;
+    padding: 80px 0;
+}
+
+.skills-main-title span {
+    color: #007bff;
+}
+
+.skills-sub-title {
+    font-size: 1.5rem;
+    border-left: 4px solid #007bff;
+    padding-left: 15px;
+}
+
+/* Linear Bars */
+.skills-bar-container {
+    height: 10px;
+    background: #222;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.skills-bar-fill {
+    height: 100%;
+    background: #007bff;
+    width: 0; /* Animated via JS */
+    transition: width 1.5s ease-in-out;
+}
+
+/* Circular Meters */
+.skills-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.skills-svg {
+    transform: rotate(-90deg);
+}
+
+.skills-circle-bg {
+    fill: none;
+    stroke: #222;
+    stroke-width: 8;
+}
+
+.skills-circle-progress {
+    fill: none;
+    stroke: #007bff;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 283; /* 2 * PI * R (R=45) */
+    stroke-dashoffset: 283; /* Hidden by default */
+    transition: stroke-dashoffset 1.5s ease-in-out;
+}
+
+.skills-circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+.skills-animate-left, .skills-animate-right {
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.skills-animate-left { transform: translateX(-50px); }
+.skills-animate-right { transform: translateX(50px); }
+
+.skills-visible {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+/* =========================================
+   SKILLS SECTION - TECH CARDS
+   ========================================= */
+
+.skills-tech-wrapper {
+    padding-top: 30px;
+}
+
+.skills-card {
+    background: #111; /* Slightly lighter than pure black */
+    border: 1px solid #222;
+    border-radius: 1px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skills-card i {
+    font-size: 2.5rem;
+    color: #007bff; /* Your accent color */
+    display: block;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.skills-card span {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+/* Hover Effect */
+.skills-card:hover {
+    background: #007bff;
+    border-color: #007bff;
+    transform: translateY(-5px);
+}
+
+.skills-card:hover i, 
+.skills-card:hover span {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Entry Animation for Cards */
+.animate-skill-card {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.5s ease;
+}
+
+.animate-skill-card.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* portfolio */
+/* =========================================
+   PORTFOLIO SECTION
+   ========================================= */
+.portfolio-section {
+    background-color: #000000;
+    padding: 100px 0;
+}
+
+.portfolio-main-title span {
+    color: #007bff;
+}
+
+.portfolio-swiper {
+    padding: 50px 0 !important;
+}
+
+.portfolio-card {
+    position: relative;
+    border-radius: 1px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: #111;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 123, 255, 0.5); /* Blue accent with transparency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform: translateY(20px);
+}
+
+.portfolio-card:hover .portfolio-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.portfolio-card:hover .portfolio-img {
+    transform: scale(1.1);
+}
+
+.portfolio-info {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.portfolio-info h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.portfolio-info p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.portfolio-links a {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 10px;
+    background: rgba(0,0,0,0.3);
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.portfolio-links a:hover {
+    background: #fff;
+    color: #007bff;
+}
+
+/* Customizing Swiper Controls */
+.swiper-button-next, .swiper-button-prev {
+    color: #007bff !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #007bff !important;
+}
+
+/* Animation */
+.portfolio-animate-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.portfolio-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* contact */
+/* =========================================
+   CONTACT SECTION TITLE STYLING
+   ========================================= */
+.contact-title {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.contact-title span {
+    color: #007bff; /* Consistent Blue Accent */
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    color: #888;
+    font-weight: 300;
+}
+
+/* Ensure the section animation handles the title */
+.contact-animate-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.contact-animate-up.contact-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   CONTACT SECTION - ROUNDED SOCIALS
+   ========================================= */
+.contact-section {
+    background-color: #000;
+    padding: 100px 0;
+}
+
+.contact-social-rounded {
+    width: 50px;
+    height: 50px;
+    background-color: #111; /* Dark grey/black */
+    border: 1px solid #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Makes it perfectly round */
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.contact-social-rounded:hover {
+    background-color: #007bff; /* Accent Blue */
+    border-color: #007bff;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Specific icon adjustments if needed */
+.contact-social-rounded i {
+    transition: transform 0.3s ease;
+}
+
+.contact-social-rounded:hover i {
+    transform: scale(1.1);
+}
+
+/* Re-using your animation classes */
+.contact-animate-item {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact-visible {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+/* =========================================
+   SCROLL TO TOP BUTTON
+   ========================================= */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* =========================================
+   FLOATING SOCIAL WIDGET
+   ========================================= */
+.social-widget {
+    position: fixed;
+    bottom: 90px; /* Sits above the Scroll-to-Top button */
+    right: 30px;
+    z-index: 999;
+    /* font-size: 20px ; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* The individual social links (hidden by default) */
+.widget-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.widget-link {
+    width: 40px;
+    height: 40px;
+    background-color: #111;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 1px solid #222;
+    transition: all 0.3s ease;
+}
+
+/* Hovering the whole widget area opens it */
+.social-widget:hover .widget-items {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* The Main Trigger Button */
+.widget-main {
+    width: 45px;
+    height: 45px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.social-widget:hover .widget-main {
+    transform: rotate(45deg); /* Rotates the share icon slightly */
+    background-color: #0056b3;
+}
+
+/* Hover effects for small links */
+.widget-link:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Tooltip names for the links (Optional) */
+.widget-link::before {
+    content: attr(title);
+    position: absolute;
+    right: 55px;
+    background: #222;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.widget-link:hover::before {
+    opacity: 1;
+}
+/*  */
+/* =========================================
+   FOOTER SECTION
+   ========================================= */
+.footer-section {
+    background-color: #050505;
+    border-top: 1px solid #1a1a1a;
+    color: #ffffff;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-logo span {
+    color: #007bff;
+}
+
+.footer-desc {
+    color: #888;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #007bff;
+}
+
+/* Link Styles */
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+    padding-left: 5px;
+}
+
+/* Contact Details */
+.footer-contact li {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact i {
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+/* Bottom Bar */
+.footer-divider {
+    background-color: #1a1a1a;
+    opacity: 1;
+}
+
+.footer-copyright, .footer-made {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Simple animation */
+.footer-animate-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.footer-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*  */
+/* =========================================
+   PRELOADER SECTION
+   ========================================= */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Highest z-index to cover everything */
+    transition: opacity 0.6s ease, visibility 0.6s;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.loader-logo span {
+    color: #007bff;
+}
+
+.loader-progress {
+    width: 200px;
+    height: 2px;
+    background: #111;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loader-bar {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #007bff;
+    box-shadow: 0 0 10px #007bff;
+    /* This creates the loading "movement" */
+    animation: loader-fill 2s infinite ease-in-out;
+}
+
+@keyframes loader-fill {
+    0% { width: 0%; left: 0; }
+    50% { width: 100%; left: 0; }
+    100% { width: 0%; left: 100%; }
+}
+
+/* Class to fade out the loader via JS */
+.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+/* =========================================
+   GALLERY SECTION
+   ========================================= */
+.gallery-section {
+    background-color: #000;
+    padding: 100px 0;
+}
+
+.gallery-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.gallery-title span {
+    color: #007bff;
+}
+
+.gallery-subtitle {
+    color: #888;
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+    height: 300px; /* Fixed height for a clean grid */
+    cursor: pointer;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Overlay Effect */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 123, 255, 0.64); /* Blue background with transparency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.gallery-text {
+    text-align: center;
+    color: #fff;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.gallery-text h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.gallery-text p {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* Hover States */
+.gallery-item:hover .gallery-img {
+    transform: scale(1.15) rotate(2deg); /* Zoom and slight tilt */
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .gallery-text {
+    transform: translateY(0);
+}
+
+/* Entry Animations */
+.gallery-animate-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s;
+}
+
+.gallery-animate-item {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: 0.6s ease;
+}
+
+.gallery-visible {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+}

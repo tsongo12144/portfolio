@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santoss Tsongo | Portfolio</title>
+     <link rel="icon" href="assets/img/link3.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/stl.css">
+</head>
+<body>
+
+    <div id="preloader">
+    <div class="loader-content">
+        <h1 class="loader-logo">SANTOSS <span>TSONGO</span></h1>
+        <div class="loader-progress">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+</div>
+
+ <nav class="navbar navbar-expand-lg fixed-top main-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="#">SANTOSS <span>TSONGO</span></a>
+        
+        <div class="navbar-mobile-toggle" id="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="collapse navbar-collapse d-none d-lg-block">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="navbar-mobile-overlay" id="mobile-menu">
+    <ul class="navbar-mobile-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+    </ul>
+    <div class="navbar-mobile-socials">
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+        <a href="#"><i class='bx bxl-github'></i></a>
+        <a href="#"><i class='bx bxl-whatsapp'></i></a>
+    </div>
+</div>
+
+
+<section id="home" class="hero-section">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <div class="hero-overlay" style="background-image: url('./assets/img/im2.png');"></div>
+                <div class="carousel-caption carousel-caption-left">
+                    <h1 class="animate-hero">Full Stack Developer</h1>
+                    <p class="animate-hero">Building robust, scalable web applications from end to end.</p>
+                    <div class="social-icons animate-hero">
+                        <a href="https://github.com/tsongo12144"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/in/tsongo-santoss-17824539b/"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="hero-overlay" style="background-image: url('./assets/img/im2.png');"></div>
+                <div class="carousel-caption carousel-caption-left">
+                    <h1 class="animate-hero">Graphic Designer</h1>
+                    <p class="animate-hero">Crafting visual identities and compelling digital art.</p>
+                    <div class="social-icons animate-hero">
+                        <a href="https://www.behance.net/santosstsongo"><i class='bx bxl-behance'></i></a>
+                        <a href="https://www.instagram.com/tsongo12144/"><i class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="hero-overlay" style="background-image: url('./assets/img/im3.png');"></div>
+                <div class="carousel-caption carousel-caption-left">
+                    <h1 class="animate-hero">IoT Engineer</h1>
+                    <p class="animate-hero">Connecting the physical world to the digital cloud.</p>
+                    <div class="social-icons animate-hero">
+                        <a href="#"><i class='bx bx-chip'></i></a>
+                        <a href="https://github.com/tsongo12144" target="_blank"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="hero-overlay" style="background-image: url('./assets/img/profile.png');"></div>
+                <div class="carousel-caption carousel-caption-left">
+                    <h1 class="animate-hero">UI/UX Designer</h1>
+                    <p class="animate-hero">Designing intuitive interfaces with a user-first mindset.</p>
+                    <div class="social-icons animate-hero">
+                        <a href="https://www.figma.com/files/team/1558535823962166923/recents-and-sharing?fuid=1117823613826375614" target="_blank"><i class='bx bxl-figma'></i></a>
+                        <a href="https://dribbble.com/Tsongouss" target="_blank"><i class='bx bxl-dribbble'></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+
+<section id="about" class="about-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-5 about-animate-left">
+                <div class="about-img-wrapper">
+                    <img src="./assets/img/im4.png" alt="Santoss Tsongo" class="img-fluid about-img">
+                    <div class="about-img-border"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 about-animate-right">
+                <div class="about-content ps-lg-5">
+                    <h2 class="about-title">About <span>Me</span></h2>
+                    <h4 class="about-subtitle">Multidisciplinary Designer & Engineer</h4>
+                    <p class="about-description">
+                        Hello! I'm <strong>Santoss Tsongo</strong>. I bridge the gap between complex engineering and intuitive design. 
+                        With a background spanning Full Stack Development, IoT, and UI/UX, I create digital solutions that are 
+                        not only functional but visually stunning.
+                    </p>
+                    
+                    <div class="about-details row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li><i class='bx bx-chevron-right'></i> <strong>Birthday:</strong> 10 May 2002</li>
+                                <li><i class='bx bx-chevron-right'></i> <strong>Website:</strong> www.santosstsongo.com</li>
+                                <li><i class='bx bx-chevron-right'></i> <strong>Phone:</strong> +250 784-555-256</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li><i class='bx bx-chevron-right'></i> <strong>City:</strong> Kigali, Rwanda</li>
+                                <li><i class='bx bx-chevron-right'></i> <strong>Degree:</strong> Bachelor in IT</li>
+                                <li><i class='bx bx-chevron-right'></i> <strong>Freelance:</strong> Available</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a href="./assets/files/resume santoss.pdf" target="_blank" class="about-btn">Download CV <i class='bx bx-download'></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="skills-section py-5">
+    <div class="container">
+        <h2 class="skills-main-title text-center mb-5">My <span>Expertise</span></h2>
+        
+        <div class="row mb-5">
+
+            <div class="col-lg-6 skills-animate-left">
+
+                <h3 class="skills-sub-title mb-4">Software Engineering</h3>
+
+                <div class="skills-item mb-4">
+
+                    <div class="d-flex justify-content-between">
+                        <span>Full Stack Development</span>
+                        <span class="skills-val">90%</span>
+                    </div>
+
+                    <div class="skills-bar-container">
+                        <div class="skills-bar-fill" data-width="90%"></div>
+                    </div>
+                </div>
+
+                <div class="skills-item mb-4">
+                    <div class="d-flex justify-content-between">
+                        <span>Database Management</span>
+                        <span class="skills-val">80%</span>
+                    </div>
+                    <div class="skills-bar-container">
+                        <div class="skills-bar-fill" data-width="80%"></div>
+                    </div>
+                </div>
+
+                <div class="skills-item mb-4">
+                        <div class="d-flex justify-content-between">
+                        <span>Deployment & DevOps</span>
+                        <span class="skills-val">85%</span>
+                        </div>
+
+                    <div class="skills-bar-container">
+                        <div class="skills-bar-fill" style="width: 85%;" data-width="85%"></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-lg-6 skills-animate-right">
+                <h3 class="skills-sub-title mb-4">Creative & Engineering</h3>
+                <div class="row text-center">
+
+                    <div class="col-4">
+                        <div class="skills-circle">
+                            <svg class="skills-svg" viewBox="0 0 100 100">
+                                <circle class="skills-circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="skills-circle-progress" cx="50" cy="50" r="45" data-percent="85"></circle>
+                            </svg>
+                            <div class="skills-circle-text">85%</div>
+                        </div>
+                        <p class="mt-2">UI/UX</p>
+                    </div>
+
+                    <div class="col-4">
+                    <div class="skills-circle">
+                    <svg class="skills-svg" viewBox="0 0 100 100">
+                    <circle class="skills-circle-bg" cx="50" cy="50" r="45"></circle>
+                    <circle class="skills-circle-progress" cx="50" cy="50" r="45" data-percent="80"></circle>
+                    </svg>
+                    <div class="skills-circle-text">80%</div>
+                    </div>
+                    <p class="mt-2">Graphic Design</p>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="skills-circle">
+                        <svg class="skills-svg" viewBox="0 0 100 100">
+                        <circle class="skills-circle-bg" cx="50" cy="50" r="45"></circle>
+                        <circle class="skills-circle-progress" cx="50" cy="50" r="45" data-percent="95"></circle>
+                        </svg>
+                        <div class="skills-circle-text">95%</div>
+                        </div>
+                        <p class="mt-2">Creativity</p>
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+
+        <div class="skills-tech-wrapper mt-5">
+            <h3 class="skills-sub-title mb-4 text-center">Tools & Technologies</h3>
+            <div class="row g-4 justify-content-center">
+                
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="skills-card animate-skill-card">
+                        <i class='bx bxl-react'></i>
+                        <span>React</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="skills-card animate-skill-card">
+                        <i class='bx bxl-nodejs'></i>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="skills-card animate-skill-card">
+                        <i class='bx bxl-python'></i>
+                        <span>Python</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="skills-card animate-skill-card">
+                        <i class='bx bxl-figma'></i>
+                        <span>Figma</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="skills-card animate-skill-card">
+                        <i class='bx bxl-flutter'></i>
+                        <span>Flutter</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="skills-card animate-skill-card">
+                        <i class='bx bxl-docker'></i>
+                        <span>Docker</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="skills-card animate-skill-card">
+                    <i class='bx bxl-github'></i>
+                    <span>GitHub</span>
+                    </div>
+                </div>
+
+            <div class="col-6 col-md-3 col-lg-2">
+                <div class="skills-card animate-skill-card">
+                    <i class='bx bx-movie-play'></i>
+                    <span>After Effects</span>
+                </div>
+            </div>
+
+
+
+                <div class="col-6 col-md-3 col-lg-2">
+    <div class="skills-card animate-skill-card">
+    <i class='bx bxl-php'></i>
+    <span>Laravel</span>
+    </div>
+    </div>
+
+    <div class="col-6 col-md-3 col-lg-2">
+    <div class="skills-card animate-skill-card">
+    <i class='bx bxl-java'></i>
+    <span>Java</span>
+    </div>
+    </div>
+
+    <div class="col-6 col-md-3 col-lg-2">
+    <div class="skills-card animate-skill-card">
+    <i class='bx bx-microchip'></i>
+    <span>IoT</span>
+    </div>
+    </div>
+
+    <div class="col-6 col-md-3 col-lg-2">
+    <div class="skills-card animate-skill-card">
+    <i class='bx bx-tachometer'></i>
+    <span>Sensors</span>
+    </div>
+    </div>
+
+
+    <div class="col-6 col-md-3 col-lg-2">
+    <div class="skills-card animate-skill-card">
+    <i class='bx bx-cog'></i>
+    <span>Embedded</span>
+    </div>
+    </div>
+
+    <div class="col-6 col-md-3 col-lg-2">
+    <div class="skills-card animate-skill-card">
+    <i class='bx bx-cloud'></i>
+    <span>Cloud IoT</span>
+    </div>
+    </div>
+
+
+
+    <div class="col-6 col-md-3 col-lg-2">
+    <div class="skills-card animate-skill-card">
+    <i class='bx bxl-android'></i>
+    <span>Android</span>
+    </div>
+    </div>
+
+    <div class="col-6 col-md-3 col-lg-2">
+    <div class="skills-card animate-skill-card">
+    <i class='bx bxl-apple'></i>
+    <span>iOS</span>
+    </div>
+    </div>
+
+    <div class="col-6 col-md-3 col-lg-2">
+    <div class="skills-card animate-skill-card">
+        <i class='bx bxl-react'></i>
+        <span>React Native</span>
+    </div>
+    </div>
+
+    <div class="col-6 col-md-3 col-lg-2">
+    <div class="skills-card animate-skill-card">
+        <i class='bx bx-paint'></i>
+        <span>Mobile UI/UX</span>
+    </div>
+    </div>
+
+
+
+    
+    
+    </div>
+    </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio" class="portfolio-section py-5">
+    <div class="container">
+        <h2 class="portfolio-main-title text-center mb-5">My <span>Projects</span></h2>
+        
+        <div class="swiper portfolio-swiper portfolio-animate-up">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                    <div class="portfolio-card">
+                       <img src="./assets/img/101.png" alt="Project 4" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>das-aupair-matching.de</h4>
+                                <p>Full Stack / React & Node.js</p>
+                                <div class="portfolio-links">
+                                    <a href="#"><i class='bx bx-link-external'></i></a>
+                                    <a href="#"><i class='bx bxl-github'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="portfolio-card">
+                     <img src="./assets/img/100.png" alt="Project 4" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>akagera-rhein-center</h4>
+                                <p>Full Stack / React & Node.js</p>
+                                <div class="portfolio-links">
+                                    <a href="#"><i class='bx bx-show'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="portfolio-card">
+                  <img src="./assets/img/107.png" alt="Project 4" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>DYNACE GLOBAL DRC</h4>
+                                <p>Laravel</p>
+                                <div class="portfolio-links">
+                                    <a href="#"><i class='bx bxl-github'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="portfolio-card">
+                  <img src="./assets/img/109.png" alt="Project 4" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>The germanclassroom</h4>
+                                <p>Laravel 11</p>
+                                <div class="portfolio-links">
+                                    <a href="#"><i class='bx bxl-github'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="portfolio-card">
+                      <img src="./assets/img/110.png" alt="Project 4" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Brand Identity</h4>
+                                <p>Graphic Design / Adobe Suite</p>
+                                <div class="portfolio-links">
+                                    <a href="#"><i class='bx bx-image'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="swiper-slide">
+                    <div class="portfolio-card">
+                  <img src="./assets/img/108.png" alt="Project 4" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>germanclassroom</h4>
+                                <p>Laravel 11</p>
+                                <div class="portfolio-links">
+                                    <a href="#"><i class='bx bxl-github'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section py-5">
+    <div class="container text-center">
+        <div class="contact-animate-up mb-5">
+            <h2 class="contact-title">Get In <span>Touch</span></h2>
+            <p class="contact-subtitle">Let's build something amazing together.</p>
+        </div>
+
+         <div class="contact-social-wrapper d-flex justify-content-center flex-wrap gap-3">
+             <a href="mailto:tsongosantoss@gmail.com" class="contact-social-rounded contact-animate-item">
+                <i class='bx bx-envelope'></i>
+            </a>
+            <a href="https://www.linkedin.com/in/tsongo-santoss-17824539b/" target="_blank" class="contact-social-rounded contact-animate-item">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="https://github.com/tsongo12144" target="_blank" class="contact-social-rounded contact-animate-item">
+                <i class='bx bxl-github'></i>
+            </a>
+
+            <a href="https://wa.me/250784555256?text=Hello%20Welcome%20to%20my%20portfolio!%20How%20can%20I%20help%20you%20today%3F"
+            target="_blank"
+            class="contact-social-rounded contact-animate-item">
+                <i class='bx bxl-whatsapp'></i>
+            </a>
+
+
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="gallery-section py-5">
+    <div class="container">
+        <div class="text-center mb-5 gallery-animate-up">
+            <h2 class="gallery-title">Visual <span>Journey</span></h2>
+            <p class="gallery-subtitle">A collection of my creative captures and design experiments.</p>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-md-4 col-sm-6 gallery-animate-item">
+                <div class="gallery-item">
+                    <img src="./assets/img/200.png" alt="Gallery Image" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">
+                            <h4>Iot Lifelinebot</h4>
+                            <p>hardware Wiring</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 gallery-animate-item">
+                <div class="gallery-item">
+                    <img src="./assets/img/207.png" alt="Gallery Image" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">
+                            <h4>Figma Prototype</h4>
+                            <p>UI/UX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 gallery-animate-item">
+                <div class="gallery-item">
+                    <img src="./assets/img/300.png" alt="Gallery Image" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">
+                            <h4>Graphic Design</h4>
+                            <p>adobe photoshop</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 gallery-animate-item">
+                <div class="gallery-item">
+                    <img src="./assets/img/209.png" alt="Gallery Image" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">
+                            <h4>Admin pannel</h4>
+                            <p>React Js</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 gallery-animate-item">
+                <div class="gallery-item">
+                    <img src="./assets/img/211.png" alt="Gallery Image" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">
+                            <h4>Valuable Components</h4>
+                            <p>React Js</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                       <div class="col-md-4 col-sm-6 gallery-animate-item">
+                <div class="gallery-item">
+                    <img src="./assets/img/207.png" alt="Gallery Image" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">
+                            <h4>Figma Prototype</h4>
+                            <p>UI/UX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5 col-sm-6 gallery-animate-item">
+                <div class="gallery-item">
+                    <img src="./assets/img/210.png" alt="Gallery Image" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">
+                            <h4>Chat Bot Integration</h4>
+                            <p>AI & ML</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="col-md-3 col-sm-6 gallery-animate-item">
+                <div class="gallery-item">
+                    <img src="./assets/img/301.png" alt="Gallery Image" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">
+                            <h4>Graphic Design</h4>
+                            <p>adobe photoshop</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer" class="footer-section pt-5 pb-3">
+    <div class="container">
+        <div class="row gy-4 footer-animate-up">
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Santoss <span>Tsongo</span></h3>
+                    <p class="footer-desc">
+                        A multidisciplinary professional focused on building digital solutions through code, design, and hardware engineering. 
+                    </p>
+                    <div class="footer-socials d-flex gap-2">
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-github'></i></a>
+                        <a href="#"><i class='bx bxl-behance'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h5 class="footer-title">Navigation</h5>
+                <ul class="footer-links list-unstyled">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">My Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-title">Expertise</h5>
+                <ul class="footer-links list-unstyled">
+                    <li><a href="#skills">Full Stack Dev</a></li>
+                    <li><a href="#skills">UI/UX Design</a></li>
+                    <li><a href="#skills">IoT Engineering</a></li>
+                    <li><a href="#skills">Graphic Design</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-title">Contact</h5>
+                <ul class="footer-contact list-unstyled">
+                    <li><i class='bx bx-map-pin'></i> Kigali, Rwanda</li>
+                    <li><i class='bx bx-envelope'></i> tsongosantoss@gmail.com</li>
+                    <li><i class='bx bx-phone'></i> +250 784 555 256</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider my-4">
+
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="footer-copyright mb-0">&copy; 2025 Santoss Tsongo. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <p class="footer-made mb-0">Designed with <i class='bx bxs-heart text-danger'></i> by Santoss</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/footer.js"></script>
+
+<div class="social-widget">
+    <div class="widget-items">
+        <a href="mailto:tsongosantoss@gmail.com" class="widget-link email" title="Email"><i class='bx bx-envelope'></i></a>
+            <!-- Direct Call -->
+        <a href="tel:+250784555256" class="widget-link phone" title="Call">
+            <i class='bx bx-phone-call'></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tsongo-santoss-17824539b/" target="_blank" class="widget-link linkedin" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://github.com/tsongo12144" target="_blank" class="widget-link github" title="GitHub"><i class='bx bxl-github'></i></a>
+        <a href="https://wa.me/250784555256?text=Hello%20Welcome%20to%20my%20portfolio!%20How%20can%20I%20help%20you%20today%3F" target="_blank" class="widget-link whatsapp" title="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+    </div>
+
+    <div class="widget-main">
+        <i class='bx bx-share-alt'></i>
+    </div>
+</div>
+
+<a href="#" id="scrollTop" class="scroll-top-btn">
+    <i class='bx bx-up-arrow-alt'></i>
+</a>
+
+<script src="assets/js/contact.js"></script>
+
+<script src="assets/js/portfolio.js"></script>
+
+<script src="assets/js/skills.js"></script>
+
+<script src="assets/js/about.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/hero.js"></script>
+    <script src="assets/js/about.js"></script>
+    <script src="assets/js/skills.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/gallery.js"></script>
+    <script>
+    $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+    $('.social-widget').fadeIn();
+    } else {
+    $('.social-widget').fadeOut();
+    }
+    });
+    </script>
+    <script>
+        $(document).ready(function() {
+    const footerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                $(entry.target).find('.footer-animate-up').addClass('footer-visible');
+                footerObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    const target = document.querySelector('#footer');
+    if (target) footerObserver.observe(target);
+});
+    </script>
+    <script>
+        // Disable scroll immediately on script load
+$('body').css('overflow', 'hidden');
+
+$(window).on('load', function() {
+    // Re-enable scroll once fully loaded
+    setTimeout(function() {
+        $('body').css('overflow', 'auto');
+    }, 1000);
+});
+    </script>
+</body>
+</html>
