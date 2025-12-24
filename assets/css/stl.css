@@ -12,6 +12,18 @@ body {
     overflow-x: hidden;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Crucial: padding won't increase width */
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling as a safety net */
+    position: relative;
+}
+
 
 /* Navbar Styling */
 .navbar {
