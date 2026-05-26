@@ -25,11 +25,11 @@
     </div>
 </div>
 
- <nav class="navbar navbar-expand-lg fixed-top main-navbar">
+ <nav class="navbar navbar-expand-lg fixed-top main-navbar" id="main-navbar">
     <div class="container">
-        <a class="navbar-brand" href="#">SANTOSS <span>TSONGO</span></a>
-        
-        <div class="navbar-mobile-toggle" id="mobile-toggle">
+        <a class="navbar-brand nav-animate" href="#home">SANTOSS <span>TSONGO</span></a>
+
+        <div class="navbar-mobile-toggle nav-animate" id="mobile-toggle" aria-label="Toggle navigation">
             <span></span>
             <span></span>
             <span></span>
@@ -37,12 +37,12 @@
 
         <div class="collapse navbar-collapse d-none d-lg-block">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
-                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item nav-animate"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item nav-animate"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item nav-animate"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item nav-animate"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item nav-animate"><a class="nav-link" href="#contact">Contact Me</a></li>
+                <li class="nav-item nav-animate"><a class="nav-link" href="#gallery">Gallery</a></li>
             </ul>
         </div>
     </div>
@@ -50,12 +50,12 @@
 
 <div class="navbar-mobile-overlay" id="mobile-menu">
     <ul class="navbar-mobile-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact Me</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li class="nav-animate"><a href="#home" class="active">Home</a></li>
+        <li class="nav-animate"><a href="#about">About</a></li>
+        <li class="nav-animate"><a href="#skills">Skills</a></li>
+        <li class="nav-animate"><a href="#portfolio">Portfolio</a></li>
+        <li class="nav-animate"><a href="#contact">Contact Me</a></li>
+        <li class="nav-animate"><a href="#gallery">Gallery</a></li>
     </ul>
     <div class="navbar-mobile-socials">
         <a href="#"><i class='bx bxl-linkedin'></i></a>
@@ -68,7 +68,7 @@
 <section id="home" class="hero-section">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
         <div class="carousel-inner">
-            
+
             <div class="carousel-item active">
                 <div class="hero-overlay" style="background-image: url('./assets/img/im2.png');"></div>
                 <div class="carousel-caption carousel-caption-left">
@@ -118,7 +118,7 @@
             </div>
 
         </div>
-        
+
         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </button>
@@ -131,7 +131,7 @@
 <section id="about" class="about-section py-5">
     <div class="container">
         <div class="row align-items-center">
-            
+
             <div class="col-lg-5 about-animate-left">
                 <div class="about-img-wrapper">
                     <img src="./assets/img/im4.png" alt="Santoss Tsongo" class="img-fluid about-img">
@@ -144,11 +144,11 @@
                     <h2 class="about-title">About <span>Me</span></h2>
                     <h4 class="about-subtitle">Multidisciplinary Designer & Engineer</h4>
                     <p class="about-description">
-                        Hello! I'm <strong>Santoss Tsongo</strong>. I bridge the gap between complex engineering and intuitive design. 
-                        With a background spanning Full Stack Development, IoT, and UI/UX, I create digital solutions that are 
+                        Hello! I'm <strong>Santoss Tsongo</strong>. I bridge the gap between complex engineering and intuitive design.
+                        With a background spanning Full Stack Development, IoT, and UI/UX, I create digital solutions that are
                         not only functional but visually stunning.
                     </p>
-                    
+
                     <div class="about-details row">
                         <div class="col-md-6">
                             <ul class="list-unstyled">
@@ -177,7 +177,7 @@
 <section id="skills" class="skills-section py-5">
     <div class="container">
         <h2 class="skills-main-title text-center mb-5">My <span>Expertise</span></h2>
-        
+
         <div class="row mb-5">
 
             <div class="col-lg-6 skills-animate-left">
@@ -264,7 +264,7 @@
         <div class="skills-tech-wrapper mt-5">
             <h3 class="skills-sub-title mb-4 text-center">Tools & Technologies</h3>
             <div class="row g-4 justify-content-center">
-                
+
                 <div class="col-6 col-md-3 col-lg-2">
                     <div class="skills-card animate-skill-card">
                         <i class='bx bxl-react'></i>
@@ -398,8 +398,8 @@
 
 
 
-    
-    
+
+
     </div>
     </div>
 
@@ -416,16 +416,33 @@
 <section id="portfolio" class="portfolio-section py-5">
     <div class="container">
         <h2 class="portfolio-main-title text-center mb-5">My <span>Projects</span></h2>
-        
+
         <div class="swiper portfolio-swiper portfolio-animate-up">
             <div class="swiper-wrapper">
-                
+
                 <div class="swiper-slide">
                     <div class="portfolio-card">
                        <img src="./assets/img/101.png" alt="Project 4" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <div class="portfolio-info">
                                 <h4>das-aupair-matching.de</h4>
+                                <p>Full Stack / React & Node.js</p>
+                                <div class="portfolio-links">
+                                    <a href="#"><i class='bx bx-link-external'></i></a>
+                                    <a href="#"><i class='bx bxl-github'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <div class="portfolio-card">
+                       <img src="./assets/img/rw1.png" alt="Project 4" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>rw.der-sprachen-hub.de</h4>
                                 <p>Full Stack / React & Node.js</p>
                                 <div class="portfolio-links">
                                     <a href="#"><i class='bx bx-link-external'></i></a>
@@ -512,7 +529,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="swiper-slide">
                     <div class="portfolio-card">
                   <img src="./assets/img/108.png" alt="Project 4" class="portfolio-img">
@@ -529,7 +546,7 @@
                 </div>
 
             </div>
-            
+
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -586,6 +603,8 @@
                 </div>
             </div>
 
+            
+
             <div class="col-md-4 col-sm-6 gallery-animate-item">
                 <div class="gallery-item">
                     <img src="./assets/img/207.png" alt="Gallery Image" class="gallery-img">
@@ -610,6 +629,41 @@
                 </div>
             </div>
 
+            <div class="col-md-4 col-sm-6 gallery-animate-item">
+                <div class="gallery-item">
+                    <img src="./assets/img/rw1.png" alt="Gallery Image" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">
+                            <h4>rw.der-sprachen-hub.de</h4>
+                            <p>The german language academy platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 gallery-animate-item">
+                <div class="gallery-item">
+                    <img src="./assets/img/rw2.png" alt="Gallery Image" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">
+                            <h4>kigali.der-sprachen-hub.de</h4>
+                            <p>The german language academy platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 gallery-animate-item">
+                <div class="gallery-item">
+                    <img src="./assets/img/rw2.png" alt="Gallery Image" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">
+                            <h4>kigali.der-sprachen-hub.de</h4>
+                            <p>The german language academy platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-md-6 col-sm-6 gallery-animate-item">
                 <div class="gallery-item">
                     <img src="./assets/img/209.png" alt="Gallery Image" class="gallery-img">
@@ -676,12 +730,12 @@
 <footer id="footer" class="footer-section pt-5 pb-3">
     <div class="container">
         <div class="row gy-4 footer-animate-up">
-            
+
             <div class="col-lg-4 col-md-6">
                 <div class="footer-brand">
                     <h3 class="footer-logo">Santoss <span>Tsongo</span></h3>
                     <p class="footer-desc">
-                        A multidisciplinary professional focused on building digital solutions through code, design, and hardware engineering. 
+                        A multidisciplinary professional focused on building digital solutions through code, design, and hardware engineering.
                     </p>
                     <div class="footer-socials d-flex gap-2">
                         <a href="#"><i class='bx bxl-linkedin'></i></a>
